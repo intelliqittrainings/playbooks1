@@ -1,0 +1,15 @@
+---
+- name: Create a user on all the managed node
+  hosts: all
+  tasks:
+   - name: User Creation
+     user:
+      name: Anu
+      password: intelliqit
+      uid: 13579
+      home: /home/Anu
+      shell: /bin/bash
+      comment: "A regular user"
+
+
+...

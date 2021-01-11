@@ -1,0 +1,7 @@
+---
+a: firewalld
+b: present
+c: yes
+d: file1
+e: touch
+...

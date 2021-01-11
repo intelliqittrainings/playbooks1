@@ -1,0 +1,16 @@
+---
+- name: abc
+  hosts: all
+  tasks:
+   - name: Capture info about the file
+     stat:
+      path: /home/ubuntu/file12
+     register: result
+   - name: Display output of the above moduls
+     debug:
+      var: result
+   - name: chage permissions 
+     file:
+      name: /home/ubuntu/file12
+      mode: 0770
+     when: result.stat.executable == false     
