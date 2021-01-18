@@ -1,0 +1,6 @@
+---
+- name: Call child playbooks
+  hosts: all
+  tasks:
+   - name: Call script for multiple playbboks
+     shell: ./script1.sh

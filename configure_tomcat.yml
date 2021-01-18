@@ -1,0 +1,12 @@
+---
+- name: Configuring tomcat uisng child playbooks
+  hosts: webserver
+  tasks:
+   - name: Call multiple child playbooks fro tomcat
+     include: "{{item}}"
+     with_items:
+      - install_tomcat.yml 
+      - copy_tomcatuser.yml 
+      - change_port.yml   
+      - restart_tomcat.yml
+      - check_url_response_tomcat.yml 
