@@ -1,0 +1,6 @@
+---
+- name: Configuring apache uisng roles
+  hosts: all
+  roles:
+   - apache
+...
